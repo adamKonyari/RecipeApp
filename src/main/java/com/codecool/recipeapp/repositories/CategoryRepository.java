@@ -1,6 +1,6 @@
 package com.codecool.recipeapp.repositories;
 
-import com.codecool.recipeapp.model.Category;
+import com.codecool.recipeapp.domain.Category;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

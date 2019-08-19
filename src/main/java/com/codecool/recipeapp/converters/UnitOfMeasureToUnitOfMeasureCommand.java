@@ -1,7 +1,7 @@
 package com.codecool.recipeapp.converters;
 
 import com.codecool.recipeapp.commands.UnitOfMeasureCommand;
-import com.codecool.recipeapp.model.UnitOfMeasure;
+import com.codecool.recipeapp.domain.UnitOfMeasure;
 import lombok.Synchronized;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;

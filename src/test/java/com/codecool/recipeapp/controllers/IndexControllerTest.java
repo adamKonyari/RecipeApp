@@ -1,6 +1,6 @@
 package com.codecool.recipeapp.controllers;
 
-import com.codecool.recipeapp.model.Recipe;
+import com.codecool.recipeapp.domain.Recipe;
 import com.codecool.recipeapp.services.RecipeService;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,6 +1,6 @@
 package com.codecool.recipeapp.commands;
 
-import com.codecool.recipeapp.model.enums.Difficulty;
+import com.codecool.recipeapp.domain.enums.Difficulty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -1,8 +1,8 @@
 package com.codecool.recipeapp.converters;
 
 import com.codecool.recipeapp.commands.IngredientCommand;
-import com.codecool.recipeapp.model.Ingredient;
-import com.codecool.recipeapp.model.Recipe;
+import com.codecool.recipeapp.domain.Ingredient;
+import com.codecool.recipeapp.domain.Recipe;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
@@ -35,7 +35,7 @@ public class IngredientCommandToIngredient implements Converter<IngredientComman
 
         ingredient.setAmount(source.getAmount());
         ingredient.setDescription(source.getDescription());
-        ingredient.setUnitOfMeasure(uomConverter.convert(source.getUom()));
+        ingredient.setUom(uomConverter.convert(source.getUom()));
         return ingredient;
     }
 }

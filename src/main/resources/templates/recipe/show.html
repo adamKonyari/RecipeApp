@@ -12,6 +12,7 @@
 
 </head>
 <body>
+<!--/*@thymesVar id="recipe" type="com.codecool.recipeapp.domain.Recipe"*/-->
 <div class="container-fluid" style="margin-top: 20px">
     <div class="row">
         <div class="col-md-6 offset-3">
@@ -20,7 +21,6 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="">
-                                <!--/*@thymesVar id="recipe" type="com.codecool.recipeapp.model.Recipe"*/-->
                                 <h1 class="card-title" th:text="${recipe.description}">Recipe Description Here!</h1>
                             </div>
 
@@ -39,7 +39,6 @@
                                 <ul>
                                     <li th:remove="all">cat one</li>
                                     <li th:remove="all">cat two</li>
-                                    <!--/*@thymesVar id="recipe" type="com.codecool.recipeapp.model.Category"*/-->
                                     <li th:each="category : ${recipe.categories}"
                                         th:text="${category.getDescription()}">
                                     </li>
@@ -56,14 +55,12 @@
                                 <h5>Prep Time:</h5>
                             </div>
                             <div class="col-md-3">
-                                <!--/*@thymesVar id="recipe" type="com.codecool.recipeapp.model.Recipe"*/-->
                                 <p th:text="${(recipe.prepTime) +  '  Min'}">30 min</p>
                             </div>
                             <div class="col-md-3">
                                 <h5>Difficulty:</h5>
                             </div>
                             <div class="col-md-3">
-                                <!--/*@thymesVar id="recipe" type="com.codecool.recipeapp.model.Recipe"*/-->
                                 <p th:text="${recipe.difficulty}">Easy</p>
                             </div>
                         </div>
@@ -115,10 +112,10 @@
                                 <ul>
                                     <li th:remove="all">1 Cup of milk</li>
                                     <li th:remove="all">1 Teaspoon of chocolate</li>
-                                    <!--/*@thymesVar id="recipe" type="com.codecool.recipeapp.model.Ingredient"*/-->
+                                    <!--/*@thymesVar id="recipe" type="com.codecool.recipeapp.domain.Ingredient"*/-->
                                     <li th:each="ingredient : ${recipe.ingredients}"
                                         th:text="${(ingredient.getAmount() +
-                                        ' - ' + ingredient.unitOfMeasure.getDescription() +
+                                        ' - ' + ingredient.uom.getDescription() +
                                         ' ' + ingredient.getDescription() +
                                         ' - ' + ingredient.getDescription())}">1 Teaspoon of Sugar
                                     </li>

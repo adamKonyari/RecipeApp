@@ -1,7 +1,7 @@
 package com.codecool.recipeapp.converters;
 
 import com.codecool.recipeapp.commands.NotesCommand;
-import com.codecool.recipeapp.model.Notes;
+import com.codecool.recipeapp.domain.Notes;
 import lombok.Synchronized;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;

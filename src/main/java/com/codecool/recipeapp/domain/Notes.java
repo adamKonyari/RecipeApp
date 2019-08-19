@@ -1,4 +1,4 @@
-package com.codecool.recipeapp.model;
+package com.codecool.recipeapp.domain;
 
 import lombok.*;
 

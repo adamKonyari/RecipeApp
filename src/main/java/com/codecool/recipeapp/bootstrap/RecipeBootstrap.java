@@ -1,7 +1,7 @@
 package com.codecool.recipeapp.bootstrap;
 
-import com.codecool.recipeapp.model.*;
-import com.codecool.recipeapp.model.enums.Difficulty;
+import com.codecool.recipeapp.domain.*;
+import com.codecool.recipeapp.domain.enums.Difficulty;
 import com.codecool.recipeapp.repositories.CategoryRepository;
 import com.codecool.recipeapp.repositories.RecipeRepository;
 import com.codecool.recipeapp.repositories.UnitOfMeasureRepository;

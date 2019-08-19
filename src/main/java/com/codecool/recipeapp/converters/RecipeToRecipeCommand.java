@@ -1,8 +1,8 @@
 package com.codecool.recipeapp.converters;
 
 import com.codecool.recipeapp.commands.RecipeCommand;
-import com.codecool.recipeapp.model.Category;
-import com.codecool.recipeapp.model.Recipe;
+import com.codecool.recipeapp.domain.Category;
+import com.codecool.recipeapp.domain.Recipe;
 import lombok.Synchronized;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;

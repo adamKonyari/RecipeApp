@@ -1,6 +1,6 @@
 package com.codecool.recipeapp.repositories;
 
-import com.codecool.recipeapp.model.UnitOfMeasure;
+import com.codecool.recipeapp.domain.UnitOfMeasure;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

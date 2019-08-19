@@ -1,6 +1,6 @@
-package com.codecool.recipeapp.model;
+package com.codecool.recipeapp.domain;
 
-import com.codecool.recipeapp.model.enums.Difficulty;
+import com.codecool.recipeapp.domain.enums.Difficulty;
 import lombok.*;
 
 import javax.persistence.*;
