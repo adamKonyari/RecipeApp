@@ -2,6 +2,8 @@ package com.codecool.recipeapp.controllers;
 
 import com.codecool.recipeapp.commands.RecipeCommand;
 import com.codecool.recipeapp.domain.Recipe;
+import com.codecool.recipeapp.exceptions.NotFoundException;
+import com.codecool.recipeapp.repositories.RecipeRepository;
 import com.codecool.recipeapp.services.RecipeService;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +15,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
@@ -32,10 +36,10 @@ public class RecipeControllerTest {
 
     MockMvc mockMvc;
 
+
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-
         controller = new RecipeController(recipeService);
         mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
     }

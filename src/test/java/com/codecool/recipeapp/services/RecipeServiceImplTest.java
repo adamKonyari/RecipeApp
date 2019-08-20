@@ -3,6 +3,7 @@ package com.codecool.recipeapp.services;
 import com.codecool.recipeapp.converters.RecipeCommandToRecipe;
 import com.codecool.recipeapp.converters.RecipeToRecipeCommand;
 import com.codecool.recipeapp.domain.Recipe;
+import com.codecool.recipeapp.exceptions.NotFoundException;
 import com.codecool.recipeapp.repositories.RecipeRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,8 +17,7 @@ import java.util.Set;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
 public class RecipeServiceImplTest {
@@ -37,6 +37,16 @@ public class RecipeServiceImplTest {
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
         recipeService = new RecipeServiceImpl(recipeRepository, recipeCommandToRecipe, recipeToRecipeCommand);
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void getRecipeByIdTestNotFound() throws Exception {
+
+        Optional<Recipe> recipeOptional = Optional.empty();
+
+        when(recipeRepository.findById(anyLong())).thenReturn(recipeOptional);
+
+        Recipe recipeReturned = recipeService.findById(1L);
     }
 
     @Test
